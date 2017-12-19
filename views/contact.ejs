@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background: skyblue;
+			color: #fff;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+<% include partials/nav.ejs %>
+
+<h1>Welcome to Contact Page</h1>
+<p>heelooo Mitesh R.</p>
+<p><%= qs.dept %></p>
+
+<form id="contact-form" method="POST" action="/contact">
+	<label for="who">Who do you want to contact?</label>
+	<input type="text" name="who" value="<%= qs.person %>">
+	<label for="department">Which department?</label>
+	<input type="text" name="department" value="<%= qs.dept %>">
+	<label for="email">Your Email</label>
+	<input type="email" name="email"/>
+	<input type="submit" name="" value="submit"/>
+</form>
+
+</body>
+</html>
